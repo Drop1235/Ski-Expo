@@ -195,7 +195,7 @@
       </div>
     </div>
   </header>
-  <div class="mascot"><img src="assets/logo/honmatsu.svg" alt="Honmatsu マスコットロゴ"></div>
+  <div class="mascot"><img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu マスコットロゴ"></div>
 
   <!-- Fast-view CTA strip -->
   <section class="section bg-ice">
@@ -234,7 +234,7 @@
       </div>
       <!-- ブランドリボン -->
       <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-        <img src="assets/logo/honmatsu.svg" alt="Honmatsu ロゴ" onerror="this.style.display='none'" style="height:26px">
+        <img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu ロゴ" onerror="this.style.display='none'" style="height:26px">
         <span class="muted">Powered by Honmatsu College</span>
       </div>
     </div>
@@ -581,11 +581,10 @@
         <h2>席数に限りがあります。今すぐお申し込みを。</h2>
         <p class="muted">早割はカウントダウン終了または予定数に達し次第終了します。お支払い・詳細案内は自動返信メールでも届きます。</p>
         <div class="card" style="padding:16px 18px">
-          <form name="entry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="entry">
-            <p style="display:none">
-              <label>Don’t fill this out: <input name="bot-field"></label>
-            </p>
+          <form name="entry" method="POST" action="https://formsubmit.co/f.itoh@reshare.co.jp">
+            <input type="hidden" name="_subject" value="Ski-Expo 仮申込">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="/thanks.html">
             <div class="grid">
               <label>保護者名
                 <input required type="text" name="parent" style="width:100%;padding:.9rem;border:1px solid var(--gray-3);border-radius:10px;margin-top:.35rem">
