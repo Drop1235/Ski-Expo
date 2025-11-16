@@ -65,8 +65,9 @@
     .hero .k{color:#eaf5ff}
     .hero .k .eyebrow{color:#cfe7ff}
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-    .mascot{position:absolute;right:clamp(10px,4vw,20px);bottom:-20px;z-index:6;filter:drop-shadow(0 8px 24px rgba(0,0,0,.25))}
-    .mascot img{width:clamp(120px,16vw,200px);height:auto}
+    .mascot{position:absolute;z-index:6;right:clamp(12px,3.5vw,40px);top:clamp(10px,3vw,28px);}
+    .mascot .badge{position:absolute;inset:-18px auto auto -18px;width:clamp(160px,22vw,320px);height:clamp(160px,22vw,320px);border-radius:50%;background:radial-gradient(closest-side, rgba(255,255,255,.96), rgba(255,255,255,.86) 60%, rgba(206,229,255,.75));box-shadow:0 20px 50px rgba(6,26,43,.25)}
+    .mascot img{position:relative;display:block;width:clamp(220px,28vw,420px);height:auto;filter:drop-shadow(0 14px 34px rgba(6,26,43,.35))}
     .bar{
       position:sticky;top:0;z-index:50;background:rgba(255,255,255,.75);backdrop-filter:saturate(160%) blur(8px);
       border-bottom:1px solid rgba(13,42,70,.08);
@@ -194,8 +195,11 @@
         />
       </div>
     </div>
+    <div class="mascot" aria-hidden="true">
+      <span class="badge" aria-hidden="true"></span>
+      <img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu マスコットロゴ">
+    </div>
   </header>
-  <div class="mascot"><img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu マスコットロゴ"></div>
 
   <!-- Fast-view CTA strip -->
   <section class="section bg-ice">
