@@ -65,6 +65,8 @@
     .hero .k{color:#eaf5ff}
     .hero .k .eyebrow{color:#cfe7ff}
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .mascot{position:absolute;right:clamp(10px,4vw,20px);bottom:-20px;z-index:6;filter:drop-shadow(0 8px 24px rgba(0,0,0,.25))}
+    .mascot img{width:clamp(120px,16vw,200px);height:auto}
     .bar{
       position:sticky;top:0;z-index:50;background:rgba(255,255,255,.75);backdrop-filter:saturate(160%) blur(8px);
       border-bottom:1px solid rgba(13,42,70,.08);
@@ -153,7 +155,7 @@
       <div class="logo">
         <span class="logo__dot"></span>
         <span>SNOW GROW CAMP</span>
-        <span class="pill hide-on-mobile">2泊3日｜小学生向け</span>
+        <span class="pill hide-on-mobile">2泊3日｜小4〜小6</span>
       </div>
       <nav class="nav">
         <a href="#story">冒険ストーリー</a>
@@ -179,7 +181,7 @@
           <a href="#price" class="btn btn--ghost">お友達割引を確認</a>
         </div>
         <div class="kpis">
-          <div class="k"><div class="eyebrow">対象</div><b>小学生</b></div>
+          <div class="k"><div class="eyebrow">対象</div><b>小4〜小6</b></div>
           <div class="k"><div class="eyebrow">日程</div><b>2泊3日</b></div>
           <div class="k"><div class="eyebrow">場所</div><b>長野県スキー場</b></div>
         </div>
@@ -193,6 +195,7 @@
       </div>
     </div>
   </header>
+  <div class="mascot"><img src="assets/logo/honmatsu.svg" alt="Honmatsu マスコットロゴ"></div>
 
   <!-- Fast-view CTA strip -->
   <section class="section bg-ice">
@@ -578,7 +581,11 @@
         <h2>席数に限りがあります。今すぐお申し込みを。</h2>
         <p class="muted">早割はカウントダウン終了または予定数に達し次第終了します。お支払い・詳細案内は自動返信メールでも届きます。</p>
         <div class="card" style="padding:16px 18px">
-          <form onsubmit="event.preventDefault(); alert('仮申込を受け付けました。担当よりご連絡します。');">
+          <form name="entry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="entry">
+            <p style="display:none">
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p>
             <div class="grid">
               <label>保護者名
                 <input required type="text" name="parent" style="width:100%;padding:.9rem;border:1px solid var(--gray-3);border-radius:10px;margin-top:.35rem">
@@ -589,7 +596,7 @@
               <label>お子さまの学年
                 <select required name="grade" style="width:100%;padding:.9rem;border:1px solid var(--gray-3);border-radius:10px;margin-top:.35rem">
                   <option value="">選択してください</option>
-                  <option>小1</option><option>小2</option><option>小3</option><option>小4</option><option>小5</option><option>小6</option>
+                  <option>小4</option><option>小5</option><option>小6</option>
                 </select>
               </label>
               <label>スキー経験
@@ -620,8 +627,8 @@
     <div class="container grid grid--2">
       <div>
         <div class="logo"><span class="logo__dot"></span><span>SNOW GROW CAMP</span></div>
-        <p class="note">主催：Snow Grow Education｜旅行手配：提携旅行会社｜お問い合わせ：info@example.com</p>
-        <p class="note">© <span id="year"></span> Snow Grow Education</p>
+        <p class="note">主催：Reshare株式会社｜お問い合わせ：f.itoh@reshare.co.jp</p>
+        <p class="note">© <span id="year"></span> Reshare株式会社</p>
       </div>
       <div>
         <p><a href="#safety">安全方針</a>｜<a href="#faq">FAQ</a>｜<a href="#entry">申込</a></p>
