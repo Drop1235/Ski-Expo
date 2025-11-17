@@ -138,6 +138,9 @@
     .kv div{display:contents}
     .kv dt{background:#f0f6ff;border:1px solid var(--gray-2);padding:.6rem .8rem;border-radius:10px;font-weight:800;color:#0b3b66}
     .kv dd{margin:0;padding:.6rem .8rem}
+    /* Mentor cards: stack on mobile, two columns on larger screens */
+    .mentor{display:grid;gap:16px;grid-template-columns:1fr;align-items:start}
+    @media(min-width:700px){.mentor{grid-template-columns:140px 1fr}}
     /* Simple table */
     .table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;box-shadow:var(--shadow);background:#fff}
     .table thead th{background:#eaf2fb;color:#0b2c4a;text-align:left;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--gray-2)}
@@ -256,7 +259,7 @@
           <div class="hm-gallery">
             <div class="hm-row">
               <img class="hm-photo hm-aspect-rect" src="assets/program/snowball_boy.jpg" alt="雪合戦のイメージ（投げる前の構え）">
-              <img class="hm-photo hm-aspect-rect" src="assets/program/sled_girl.jpg" alt="そりレースのイメージ（滑走）" style="object-position: 28% 50%">
+              <img class="hm-photo hm-aspect-rect" src="assets/program/sled_girl.jpg" alt="そりレースのイメージ（滑走）" style="object-position: 0% 30%">
             </div>
             <img class="hm-photo hm-aspect-rect" src="assets/program/snowman_team.jpg" alt="雪だるまアートのイメージ（制作中）" style="width:100%">
           </div>
@@ -431,14 +434,14 @@
       <span class="eyebrow">MENTORS</span>
       <h2>心のコーチと出会う。</h2>
       <div class="grid grid--2">
-        <div class="card reveal" style="display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px;align-items:start">
+        <div class="card reveal mentor" style="padding:16px">
           <img src="assets/flyer/coach-ito.jpg.png" alt="伊藤" style="width:140px;height:140px;object-fit:cover;object-position:center top;border-radius:14px">
           <div>
             <h3>伊藤｜企画者・心のコーチ</h3>
             <p class="muted">名古屋大学大学院修了後、大手メーカーに入社。その後、外資系企業での経験を経て独立し、Reshare株式会社を設立。教育事業の一環として、<b>子どもたちに多様な経験の場を提供することが人生を豊かにする</b>という理念のもと、スキーイベントを企画・運営。2026年度以降は、自然体験を通じて成長を促すキャンプ事業も展開予定。<b>自ら判断し行動する力</b>を原体験から育むことを目指している。地域ラグビースクールでの指導にも注力。本企画立案者／Reshare株式会社 代表取締役。</p>
           </div>
         </div>
-        <div class="card reveal" style="display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px;align-items:start">
+        <div class="card reveal mentor" style="padding:16px">
           <img src="assets/flyer/coach-matsunaga.jpg.png" alt="松永" style="width:140px;height:140px;object-fit:cover;object-position:center top;border-radius:14px">
           <div>
             <h3>松永｜アスリートコーチ</h3>
