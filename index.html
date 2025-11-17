@@ -147,6 +147,15 @@
     /* Prevent label wrapping in nav and buttons */
     .nav a{white-space:nowrap}
     .btn{white-space:nowrap}
+    /* Honmatsu gallery helpers */
+    .hm-showcase{display:grid;gap:16px;grid-template-columns:1fr}
+    @media(min-width:900px){.hm-showcase{grid-template-columns:1.1fr .9fr}}
+    .hm-gallery{display:grid;gap:10px}
+    @media(min-width:900px){.hm-gallery{grid-template-rows:auto 1fr;align-content:start}}
+    .hm-row{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    .hm-photo{width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+    .hm-aspect-rect{aspect-ratio:16/10}
+    .hm-aspect-tall{aspect-ratio:3/4}
   </style>
 </head>
 <body>
@@ -214,10 +223,12 @@
   <!-- アクティビティ（写真枠は削除） -->
   <!-- セクション自体を撤去しました -->
 
-  <!-- Honmatsu プログラム・ショーケース（プロ版） -->
+  <!-- Honmatsu プログラム・ショーケース（写真つき） -->
   <section class="section" id="honmatsu-showcase">
-    <div class="container card" style="padding:18px;display:grid;gap:16px;align-items:start">
-      <div class="reveal">
+    <div class="container card" style="padding:18px">
+      <div class="hm-showcase">
+        <!-- 左：説明 -->
+        <div class="reveal">
           <span class="eyebrow">HONMATSU PROGRAM</span>
           <h2>遊びが“学び”になる、3つの体験。</h2>
           <div class="hr"></div>
@@ -235,11 +246,21 @@
               <p class="muted" style="margin:0">ただの雪合戦ではなく<b>作戦会議</b>で役割・陣形・時間配分を決定。<b>戦略思考／協働／リーダーシップ</b>を体験。</p>
             </div>
           </div>
-      </div>
-      <!-- ブランドリボン -->
-      <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-        <img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu ロゴ" onerror="this.style.display='none'" style="height:26px">
-        <span class="muted">Powered by Honmatsu College</span>
+          <div style="display:flex;align-items:center;gap:10px;justify-content:flex-start;margin-top:10px">
+            <img src="assets/logo/honmatsu_logo-03.png" alt="Honmatsu ロゴ" onerror="this.style.display='none'" style="height:22px">
+            <span class="muted">Powered by Honmatsu College</span>
+          </div>
+        </div>
+        <!-- 右：フォトギャラリー -->
+        <div class="reveal">
+          <div class="hm-gallery">
+            <img class="hm-photo hm-aspect-tall" src="assets/program/snowball_boy.jpg" alt="雪合戦のイメージ（投げる前の構え）">
+            <div class="hm-row">
+              <img class="hm-photo hm-aspect-rect" src="assets/program/sled_girl.jpg" alt="そりレースのイメージ（滑走）">
+              <img class="hm-photo hm-aspect-rect" src="assets/program/snowman_team.jpg" alt="雪だるまアートのイメージ（制作中）">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
